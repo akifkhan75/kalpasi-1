@@ -1,0 +1,18 @@
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  .cart-count {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background: red;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    right: 5px;
+    top: 5px;
+  }
+}

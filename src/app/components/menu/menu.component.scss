@@ -1,0 +1,29 @@
+.manu-tags {
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    &-block1 {
+      flex: 4;
+    }
+    &-block2 {
+      flex: 1;
+    }
+    &-title {
+      margin: 0;
+      padding: 3px 0;
+    }
+    &-details {
+      margin: 0;
+    }
+    &-price {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+  }
+}

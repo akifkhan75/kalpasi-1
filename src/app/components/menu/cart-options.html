@@ -1,0 +1,40 @@
+<div class="cart-options-container">
+  <div class="cart-options">
+    <div>
+      <h4 class="cart-options-title">Egg and Toast</h4>
+      <p class="cart-options-details">Deliciuos egg with toast</p>
+    </div>
+    <div>
+      <p class="cart-options-total">740.00</p>
+    </div>
+  </div>
+  <mat-form-field appearance="outline">
+    <mat-label>Special instructions</mat-label>
+    <input matInput placeholder="e.g. no mayo" />
+  </mat-form-field>
+  <div class="cart-options-footer">
+    <div class="cart-item-counter">
+      <button
+        mat-icon-button
+        (click)="ondecrement()"
+        [disabled]="isDecrementDisabled"
+      >
+        <mat-icon>remove</mat-icon>
+      </button>
+      <p>{{ cartCounter }}</p>
+      <button mat-icon-button (click)="onIncrement()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div class="cart-button-container">
+      <button
+        mat-flat-button
+        color="primary"
+        (click)="closeCartOptions()"
+        class="add-to-cart-btn"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>

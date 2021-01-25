@@ -20,13 +20,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { OrdersComponent } from './components/orders/orders.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { MenuComponent, CartOptions } from './components/menu/menu.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuItemsComponent,
     DialogElementsExampleDialog,
-    OrdersComponent
+    OrdersComponent,
+    MenuComponent,
+    CartOptions
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,9 @@ import { MatMenuModule } from '@angular/material/menu';
     MatInputModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatChipsModule,
+    MatBottomSheetModule
   ],
   exports: [MatFormFieldModule, MatInputModule],
   providers: [],
