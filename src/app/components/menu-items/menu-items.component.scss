@@ -1,0 +1,19 @@
+.add-item-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+}
+
+.card-container {
+  padding: 10px;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+      border-bottom: solid 1px #ccc;
+      td {
+        padding: 7px;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  &-block1 {
+    flex: 4;
+  }
+  &-block2 {
+    flex: 1;
+  }
+  &-title {
+    margin: 0;
+    padding: 3px 0;
+  }
+  &-status {
+    font-weight: normal;
+    &.process {
+      color: #efa603;
+    }
+    &.ready {
+      color: #00bef7;
+    }
+    &.out-for-delivery {
+      color: #001ef7;
+    }
+    &.complete {
+      color: #09af09;
+    }
+  }
+  &-date {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  &-comment {
+    margin: 0;
+    font-style: italic;
+  }
+  &-total {
+    margin: 0;
+    font-weight: 600;
+  }
+  &-paid {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #c0c1c0;
+    .mat-icon {
+      height: 16px;
+      font-size: 1rem;
+      width: 18px;
+    }
+    &.paid {
+      color: #09af09;
+    }
+  }
+}

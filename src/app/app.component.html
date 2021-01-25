@@ -1,0 +1,48 @@
+<mat-drawer-container class="example-container" hasBackdrop="true">
+  <mat-drawer #drawer mode="over">
+    <ul role="list">
+      <li role="listitem">
+        <a routerLink="" (click)="drawer.toggle()"
+          ><mat-icon>dashboard</mat-icon> Home</a
+        >
+      </li>
+      <li role="listitem">
+        <a routerLink="/orders" (click)="drawer.toggle()"
+          ><mat-icon>phone</mat-icon> Orders</a
+        >
+      </li>
+      <li role="listitem">
+        <a routerLink="" (click)="drawer.toggle()"
+          ><mat-icon>local_dining</mat-icon> Menu</a
+        >
+      </li>
+      <li role="listitem">
+        <a routerLink="" (click)="drawer.toggle()"
+          ><mat-icon>web</mat-icon> Site</a
+        >
+      </li>
+      <li role="listitem" (click)="drawer.toggle()">
+        <a routerLink=""><mat-icon>settings</mat-icon> Operations</a>
+      </li>
+      <li role="listitem" (click)="drawer.toggle()">
+        <a routerLink=""><mat-icon>logout</mat-icon> Logout</a>
+      </li>
+    </ul>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+      <button
+        (click)="drawer.toggle()"
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

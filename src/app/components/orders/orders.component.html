@@ -1,0 +1,162 @@
+<div class="card-container">
+  <div class="page-header">
+    <h3>Orders</h3>
+    <div class="button-group">
+      <button mat-button><mat-icon>sort</mat-icon> Sort</button>
+      <button mat-button><mat-icon>filter_alt</mat-icon> Filter</button>
+    </div>
+  </div>
+  <mat-card class="order">
+    <div class="order-block1">
+      <p class="order-date">12/13/2021</p>
+      <h4 class="order-title">
+        Order 1 <small class="order-status process">(Process)</small>
+      </h4>
+      <p class="order-comment">add extra chicken</p>
+    </div>
+    <div class="order-block2">
+      <small>Total</small>
+      <p class="order-total">45</p>
+      <p class="order-paid">
+        <mat-icon>check_circle</mat-icon>
+        Paid
+      </p>
+    </div>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item disabled>
+        <span>Process</span>
+      </button>
+      <button mat-menu-item>
+        <span>Ready</span>
+      </button>
+      <button mat-menu-item>
+        <span>Out for Delivery</span>
+      </button>
+      <button mat-menu-item>
+        <span>Complete</span>
+      </button>
+    </mat-menu>
+  </mat-card>
+  <mat-card class="order">
+    <div class="order-block1">
+      <p class="order-date">12/13/2021</p>
+      <h4 class="order-title">
+        Order 2 <small class="order-status ready">(Ready)</small>
+      </h4>
+      <p class="order-comment">add extra chicken</p>
+    </div>
+    <div class="order-block2">
+      <small>Total</small>
+      <p class="order-total">45</p>
+      <p class="order-paid paid">
+        <mat-icon>check_circle</mat-icon>
+        Paid
+      </p>
+    </div>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <span>Process</span>
+      </button>
+      <button mat-menu-item disabled>
+        <span>Ready</span>
+      </button>
+      <button mat-menu-item>
+        <span>Out for Delivery</span>
+      </button>
+      <button mat-menu-item>
+        <span>Complete</span>
+      </button>
+    </mat-menu>
+  </mat-card>
+  <mat-card class="order">
+    <div class="order-block1">
+      <p class="order-date">12/13/2021</p>
+      <h4 class="order-title">
+        Order 3
+        <small class="order-status out-for-delivery">(Out for Delivery)</small>
+      </h4>
+      <p class="order-comment">add extra chicken</p>
+    </div>
+    <div class="order-block2">
+      <small>Total</small>
+      <p class="order-total">45</p>
+      <p class="order-paid">
+        <mat-icon>check_circle</mat-icon>
+        Paid
+      </p>
+    </div>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <span>Process</span>
+      </button>
+      <button mat-menu-item>
+        <span>Ready</span>
+      </button>
+      <button mat-menu-item disabled>
+        <span>Out for Delivery</span>
+      </button>
+      <button mat-menu-item>
+        <span>Complete</span>
+      </button>
+    </mat-menu>
+  </mat-card>
+  <mat-card class="order">
+    <div class="order-block1">
+      <p class="order-date">12/13/2021</p>
+      <h4 class="order-title">
+        Order 4 <small class="order-status complete">(Complete)</small>
+      </h4>
+      <p class="order-comment">add extra chicken</p>
+    </div>
+    <div class="order-block2">
+      <small>Total</small>
+      <p class="order-total">45</p>
+      <p class="order-paid paid">
+        <mat-icon>check_circle</mat-icon>
+        Paid
+      </p>
+    </div>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <span>Process</span>
+      </button>
+      <button mat-menu-item>
+        <span>Ready</span>
+      </button>
+      <button mat-menu-item>
+        <span>Out for Delivery</span>
+      </button>
+      <button mat-menu-item disabled>
+        <span>Complete</span>
+      </button>
+    </mat-menu>
+  </mat-card>
+</div>
