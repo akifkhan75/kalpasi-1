@@ -1,0 +1,52 @@
+.daily-stats {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .mat-card {
+    margin-bottom: 10px;
+    flex: 0 40%;
+    width: 100%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 114% 153%;
+    background-color: #fff;
+    &.total {
+      color: #09af09;
+      background-image: url("../../../assets/images/orders.png");
+    }
+    &.canceled {
+      color: crimson;
+      background-image: url("../../../assets/images/canceled.png");
+    }
+    &.pending {
+      color: #efa603;
+      background-image: url("../../../assets/images/pending.png");
+    }
+    &.out-for-delivery {
+      color: #00bef7;
+      background-image: url("../../../assets/images/delivery.png");
+    }
+    .label {
+      font-size: 0.9rem;
+    }
+    h3 {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 2rem;
+    }
+  }
+}
+
+.top-selling-list {
+  .mat-list-item {
+    height: auto;
+    border-bottom: solid 1px #ccc;
+    .list-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}

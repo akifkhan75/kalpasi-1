@@ -1,4 +1,42 @@
 <mat-tab-group mat-align-tabs="start">
+  <mat-tab label="Menu">
+    <div class="card-container">
+      <mat-card>
+        <table>
+          <tr>
+            <td>Chicken Curry</td>
+            <td align="center"><mat-icon>delete</mat-icon></td>
+          </tr>
+          <tr>
+            <td>Lamb Curry</td>
+            <td align="center"><mat-icon>delete</mat-icon></td>
+          </tr>
+          <tr>
+            <td>Plalntian</td>
+            <td align="center"><mat-icon>delete</mat-icon></td>
+          </tr>
+          <tr>
+            <td>Fried Rice</td>
+            <td align="center"><mat-icon>delete</mat-icon></td>
+          </tr>
+          <tr>
+            <td>Chicken Curry</td>
+            <td align="center"><mat-icon>delete</mat-icon></td>
+          </tr>
+        </table>
+      </mat-card>
+    </div>
+    <div class="example-button-container">
+      <button
+        mat-fab
+        color="primary"
+        class="add-item-btn"
+        aria-label="Example icon button with a delete icon"
+      >
+        <mat-icon (click)="openDialog()">add</mat-icon>
+      </button>
+    </div>
+  </mat-tab>
   <mat-tab label="Menu Items">
     <div class="card-container">
       <mat-card>
@@ -42,5 +80,4 @@
       </button>
     </div>
   </mat-tab>
-  <mat-tab label="Menu">Content 1</mat-tab>
 </mat-tab-group>

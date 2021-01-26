@@ -1,0 +1,41 @@
+<div class="card-container">
+  <div class="page-header">
+    <h3>Operations</h3>
+    <div class="button-group">
+      <button mat-icon-button><mat-icon>edit</mat-icon></button>
+    </div>
+  </div>
+  <mat-card>
+    <mat-form-field appearance="outline">
+      <mat-label>Operating Days</mat-label>
+      <mat-select [formControl]="days" multiple>
+        <mat-option *ngFor="let day of daysLlist" [value]="day">{{
+          day
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="operating-times">
+      <mat-form-field appearance="outline">
+        <mat-label>Operating Hours From</mat-label>
+        <input type="time" matInput placeholder="Placeholder" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Operating Hours To</mat-label>
+        <input type="time" matInput placeholder="Placeholder" />
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="outline">
+      <mat-label>Delivery Hours</mat-label>
+      <input type="time" matInput placeholder="Some Text here" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Minimum Amount for Delivery</mat-label>
+      <input type="number" matInput placeholder="e.g. 10, 20" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Delivery Charges</mat-label>
+      <input type="number" matInput placeholder="Placeholder" />
+    </mat-form-field>
+    <button mat-button>Update</button>
+  </mat-card>
+</div>

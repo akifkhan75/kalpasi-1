@@ -1,0 +1,31 @@
+<div class="card-container">
+  <div class="page-header">
+    <h3>About</h3>
+    <div class="button-group">
+      <button mat-icon-button><mat-icon>edit</mat-icon></button>
+    </div>
+  </div>
+  <mat-card>
+    <mat-form-field appearance="outline">
+      <mat-label>About Restaurant</mat-label>
+      <textarea matInput placeholder="Some Text here"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <input type="text" matInput placeholder="Placeholder" />
+      <button mat-icon-button matSuffix>
+        <mat-icon>my_location</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Phone</mat-label>
+      <input type="tel" matInput placeholder="Placeholder" />
+      <mat-hint>Include area code</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="Placeholder" />
+    </mat-form-field>
+    <button mat-button>Update</button>
+  </mat-card>
+</div>

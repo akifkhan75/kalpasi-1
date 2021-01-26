@@ -3,7 +3,7 @@
     <ul role="list">
       <li role="listitem">
         <a routerLink="" (click)="drawer.toggle()"
-          ><mat-icon>dashboard</mat-icon> Home</a
+          ><mat-icon>dashboard</mat-icon> Dashboard</a
         >
       </li>
       <li role="listitem">
@@ -17,12 +17,12 @@
         >
       </li>
       <li role="listitem">
-        <a routerLink="" (click)="drawer.toggle()"
+        <a routerLink="/site" (click)="drawer.toggle()"
           ><mat-icon>web</mat-icon> Site</a
         >
       </li>
       <li role="listitem" (click)="drawer.toggle()">
-        <a routerLink=""><mat-icon>settings</mat-icon> Operations</a>
+        <a routerLink="/operations"><mat-icon>settings</mat-icon> Operations</a>
       </li>
       <li role="listitem" (click)="drawer.toggle()">
         <a routerLink=""><mat-icon>logout</mat-icon> Logout</a>
