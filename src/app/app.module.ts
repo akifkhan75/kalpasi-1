@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MenuItemsComponent,
-  DialogElementsExampleDialog
+  DialogElementsExampleDialog,
+  AddMenuDialog
 } from './components/menu-items/menu-items.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -35,6 +36,7 @@ import { MatSelectModule } from '@angular/material/select';
     AppComponent,
     MenuItemsComponent,
     DialogElementsExampleDialog,
+    AddMenuDialog,
     OrdersComponent,
     MenuComponent,
     CartOptions,

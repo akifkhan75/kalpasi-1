@@ -7,12 +7,16 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./menu-items.component.scss']
 })
 export class MenuItemsComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public menuDialog: MatDialog) {}
 
   ngOnInit() {}
 
   openDialog() {
     this.dialog.open(DialogElementsExampleDialog);
+  }
+
+  openMenuDialog() {
+    this.menuDialog.open(AddMenuDialog);
   }
 }
 
@@ -21,3 +25,9 @@ export class MenuItemsComponent implements OnInit {
   templateUrl: 'dialog-elements.html'
 })
 export class DialogElementsExampleDialog {}
+
+@Component({
+  selector: 'add-menu-dialog',
+  templateUrl: 'add-menu-dialog.html'
+})
+export class AddMenuDialog {}
