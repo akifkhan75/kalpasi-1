@@ -6,38 +6,75 @@
     </div>
   </div>
   <mat-card>
-    <div class="banner">
-      <img
-        src="../../../assets/images/banner.webp"
-        style="width:100%;margin-bottom:20px"
-        alt=""
-      />
-      <button mat-icon-button><mat-icon>camera_alt</mat-icon></button>
-    </div>
     <mat-form-field appearance="outline">
       <mat-label>Restaurant Name</mat-label>
       <input type="text" matInput placeholder="Placeholder" />
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>About Restaurant</mat-label>
-      <textarea matInput placeholder="Some Text here"></textarea>
+      <mat-label>Choose Template</mat-label>
+      <mat-select>
+        <mat-option value="Template 1">Template 1</mat-option>
+        <mat-option value="Template 2">Template 2</mat-option>
+        <mat-option value="Template 3">Template 3</mat-option>
+      </mat-select>
     </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Address</mat-label>
-      <input type="text" matInput placeholder="Placeholder" />
-      <button mat-icon-button matSuffix>
-        <mat-icon>my_location</mat-icon>
+    <div class="template-requirements">
+      <h4>Template Requirements</h4>
+      <ul>
+        <li>Background image</li>
+        <li>Banner message</li>
+        <li>About message</li>
+        <li>Reataurant story image</li>
+      </ul>
+    </div>
+    <h4>Add Images</h4>
+    <div class="images-group">
+      <div class="form-field">
+        <label for="">Add Images</label>
+        <input type="file" />
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Image Type</mat-label>
+        <mat-select>
+          <mat-option value="Background Image">Background Image</mat-option>
+          <mat-option value="Shop Image">Shop Image</mat-option>
+          <mat-option value="Employee Image">Employee Image</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="banner">
+        <img
+          src="../../../assets/images/banner.webp"
+          style="width:100%;margin-bottom:20px"
+          alt=""
+        />
+        <!-- <button mat-icon-button><mat-icon>camera_alt</mat-icon></button> -->
+      </div>
+    </div>
+    <div class="button-group">
+      <button mat-button color="Primary">
+        <mat-icon>add</mat-icon> Add More Images
       </button>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Phone</mat-label>
-      <input type="tel" matInput placeholder="Placeholder" />
-      <mat-hint>Include area code</mat-hint>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input type="email" matInput placeholder="Placeholder" />
-    </mat-form-field>
+      <button mat-button><mat-icon>remove</mat-icon> Remove Image</button>
+    </div>
+    <h4>Add Messages</h4>
+    <div class="messages-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Select Message Type</mat-label>
+        <mat-select>
+          <mat-option value="Type 1">Type 1</mat-option>
+          <mat-option value="Type 2">Type 2</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Message</mat-label>
+        <textarea matInput placeholder="Type Message Here"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="button-group">
+      <button mat-button color="Primary">Add More Messages</button>
+      <button mat-button>Remove Message</button>
+    </div>
+
     <button mat-button>Update</button>
   </mat-card>
 </div>
