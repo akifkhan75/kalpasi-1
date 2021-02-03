@@ -6,18 +6,20 @@
     </div>
   </div>
   <mat-card>
-    <mat-form-field appearance="outline">
-      <mat-label>Restaurant Name</mat-label>
-      <input type="text" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Choose Template</mat-label>
-      <mat-select>
-        <mat-option value="Template 1">Template 1</mat-option>
-        <mat-option value="Template 2">Template 2</mat-option>
-        <mat-option value="Template 3">Template 3</mat-option>
-      </mat-select>
-    </mat-form-field>
+    <div class="template-options">
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant Name</mat-label>
+        <input type="text" matInput placeholder="Placeholder" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Choose Template</mat-label>
+        <mat-select>
+          <mat-option value="Template 1">Template 1</mat-option>
+          <mat-option value="Template 2">Template 2</mat-option>
+          <mat-option value="Template 3">Template 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
     <div class="template-requirements">
       <h4>Template Requirements</h4>
       <ul>
@@ -27,20 +29,23 @@
         <li>Reataurant story image</li>
       </ul>
     </div>
+    <hr />
     <h4>Add Images</h4>
     <div class="images-group">
-      <div class="form-field">
-        <label for="">Add Images</label>
-        <input type="file" />
+      <div class="image-fields">
+        <div class="form-field">
+          <label for="">Add Images</label>
+          <input type="file" />
+        </div>
+        <mat-form-field appearance="outline">
+          <mat-label>Image Type</mat-label>
+          <mat-select>
+            <mat-option value="Background Image">Background Image</mat-option>
+            <mat-option value="Shop Image">Shop Image</mat-option>
+            <mat-option value="Employee Image">Employee Image</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
-      <mat-form-field appearance="outline">
-        <mat-label>Image Type</mat-label>
-        <mat-select>
-          <mat-option value="Background Image">Background Image</mat-option>
-          <mat-option value="Shop Image">Shop Image</mat-option>
-          <mat-option value="Employee Image">Employee Image</mat-option>
-        </mat-select>
-      </mat-form-field>
       <div class="banner">
         <img
           src="../../../assets/images/banner.webp"
@@ -56,6 +61,7 @@
       </button>
       <button mat-button><mat-icon>remove</mat-icon> Remove Image</button>
     </div>
+    <hr />
     <h4>Add Messages</h4>
     <div class="messages-group">
       <mat-form-field appearance="outline">
@@ -74,7 +80,7 @@
       <button mat-button color="Primary">Add More Messages</button>
       <button mat-button>Remove Message</button>
     </div>
-
-    <button mat-button>Update</button>
+    <hr />
+    <button mat-flat-button color="primary">Update</button>
   </mat-card>
 </div>

@@ -4,19 +4,23 @@
       <mat-card>
         <table>
           <tr>
-            <td>Breakfast</td>
-            <td align="center"><mat-icon>delete</mat-icon></td>
+            <td width="90">Breakfast</td>
+            <td width="5" align="center"><mat-icon>edit</mat-icon></td>
+            <td width="5" align="center"><mat-icon>delete</mat-icon></td>
           </tr>
           <tr>
             <td>Chinies</td>
+            <td align="center"><mat-icon>edit</mat-icon></td>
             <td align="center"><mat-icon>delete</mat-icon></td>
           </tr>
           <tr>
             <td>Drinks</td>
+            <td align="center"><mat-icon>edit</mat-icon></td>
             <td align="center"><mat-icon>delete</mat-icon></td>
           </tr>
           <tr>
             <td>Icecreem</td>
+            <td align="center"><mat-icon>edit</mat-icon></td>
             <td align="center"><mat-icon>delete</mat-icon></td>
           </tr>
         </table>
@@ -35,39 +39,96 @@
   </mat-tab>
   <mat-tab label="Menu Items">
     <div class="card-container">
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="Ex. Mia"
+          #input
+        />
+      </mat-form-field>
+
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+          <!-- ID Column -->
+          <ng-container matColumnDef="item">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Item</th>
+            <td mat-cell *matCellDef="let row">{{ row.item }}</td>
+          </ng-container>
+
+          <!-- Progress Column -->
+          <ng-container matColumnDef="menu">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Menu</th>
+            <td mat-cell *matCellDef="let row">{{ row.menu }}</td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+            <td mat-cell *matCellDef="let row">{{ row.price }}</td>
+          </ng-container>
+
+          <!-- Color Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>&nbsp;</th>
+            <td mat-cell *matCellDef="let row" [style.color]="row.actions">
+              {{ row.color }}
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">
+              No data matching the filter "{{ input.value }}"
+            </td>
+          </tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </div>
+
       <mat-card>
-        <table>
+        <!-- <table>
           <tr>
             <td>Chicken Curry</td>
             <td>Breakfast</td>
             <td>12.99</td>
+            <td align="center"><mat-icon>edit</mat-icon></td>
             <td align="center"><mat-icon>delete</mat-icon></td>
           </tr>
           <tr>
             <td>Lamb Curry</td>
             <td>Breakfast</td>
             <td>12.99</td>
+            <td align="center"><mat-icon>edit</mat-icon></td>
             <td align="center"><mat-icon>delete</mat-icon></td>
           </tr>
           <tr>
             <td>Plalntian</td>
             <td>Breakfast</td>
             <td>12.99</td>
+            <td align="center"><mat-icon>edit</mat-icon></td>
             <td align="center"><mat-icon>delete</mat-icon></td>
           </tr>
           <tr>
             <td>Fried Rice</td>
             <td>Breakfast</td>
             <td>12.99</td>
+            <td align="center"><mat-icon>edit</mat-icon></td>
             <td align="center"><mat-icon>delete</mat-icon></td>
           </tr>
           <tr>
             <td>Chicken Curry</td>
             <td>Breakfast</td>
             <td>12.99</td>
+            <td align="center"><mat-icon>edit</mat-icon></td>
             <td align="center"><mat-icon>delete</mat-icon></td>
           </tr>
-        </table>
+        </table> -->
       </mat-card>
     </div>
     <div class="example-button-container">

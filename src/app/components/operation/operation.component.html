@@ -6,15 +6,18 @@
     </div>
   </div>
   <mat-card>
-    <mat-form-field appearance="outline">
-      <mat-label>Operating Days</mat-label>
-      <mat-select [formControl]="days" multiple>
-        <mat-option *ngFor="let day of daysLlist" [value]="day">{{
-          day
-        }}</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <div class="operating-times">
+    <div class="operations-form">
+      <mat-form-field appearance="outline">
+        <mat-label>Operating Days</mat-label>
+        <mat-select [formControl]="days" multiple>
+          <mat-option *ngFor="let day of daysLlist" [value]="day">{{
+            day
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- <div class="operating-times">
+            
+          </div> -->
       <mat-form-field appearance="outline">
         <mat-label>Operating Hours From</mat-label>
         <input type="time" matInput placeholder="Placeholder" />
@@ -23,48 +26,50 @@
         <mat-label>Operating Hours To</mat-label>
         <input type="time" matInput placeholder="Placeholder" />
       </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Delivery Hours</mat-label>
+        <input type="time" matInput placeholder="Some Text here" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Minimum Amount for Delivery</mat-label>
+        <input type="number" matInput placeholder="e.g. 10, 20" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Delivery Charges</mat-label>
+        <input type="number" matInput placeholder="Placeholder" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Address Line 1</mat-label>
+        <input type="text" matInput placeholder="Placeholder" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Address Line 2</mat-label>
+        <input type="text" matInput placeholder="Placeholder" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input type="tel" matInput placeholder="Placeholder" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>State</mat-label>
+        <input type="tel" matInput placeholder="Placeholder" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Zip</mat-label>
+        <input type="tel" matInput placeholder="Placeholder" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input type="tel" matInput placeholder="Placeholder" />
+        <mat-hint>Include area code</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Placeholder" />
+      </mat-form-field>
     </div>
-    <mat-form-field appearance="outline">
-      <mat-label>Delivery Hours</mat-label>
-      <input type="time" matInput placeholder="Some Text here" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Minimum Amount for Delivery</mat-label>
-      <input type="number" matInput placeholder="e.g. 10, 20" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Delivery Charges</mat-label>
-      <input type="number" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Address Line 1</mat-label>
-      <input type="text" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Address Line 2</mat-label>
-      <input type="text" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>City</mat-label>
-      <input type="tel" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>State</mat-label>
-      <input type="tel" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Zip</mat-label>
-      <input type="tel" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Phone</mat-label>
-      <input type="tel" matInput placeholder="Placeholder" />
-      <mat-hint>Include area code</mat-hint>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input type="email" matInput placeholder="Placeholder" />
-    </mat-form-field>
-    <button mat-flat-button color="primary">Update</button>
+    <div style="text-align:center">
+      <button mat-flat-button color="primary">Update</button>
+    </div>
   </mat-card>
 </div>

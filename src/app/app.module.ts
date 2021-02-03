@@ -20,7 +20,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { OrdersComponent } from './components/orders/orders.component';
+import {
+  OrdersComponent,
+  OrderDetailsComponent,
+  OrdersFilterComponent
+} from './components/orders/orders.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MenuComponent, CartOptions } from './components/menu/menu.component';
 import { MatChipsModule } from '@angular/material/chips';
@@ -30,6 +34,9 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { OperationComponent } from './components/operation/operation.component';
 import { MatSelectModule } from '@angular/material/select';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule, MatSort } from '@angular/material/sort';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -43,7 +50,9 @@ import { MatSelectModule } from '@angular/material/select';
     DashboardComponent,
     AboutComponent,
     HomeComponent,
-    OperationComponent
+    OperationComponent,
+    OrderDetailsComponent,
+    OrdersFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +73,11 @@ import { MatSelectModule } from '@angular/material/select';
     MatMenuModule,
     MatChipsModule,
     MatBottomSheetModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   exports: [MatFormFieldModule, MatInputModule],
   providers: [],

@@ -3,7 +3,9 @@
     <h3>Orders</h3>
     <div class="button-group">
       <button mat-button><mat-icon>sort</mat-icon> Sort</button>
-      <button mat-button><mat-icon>filter_alt</mat-icon> Filter</button>
+      <button mat-button (click)="showOrderFilters()">
+        <mat-icon>filter_alt</mat-icon> Filter
+      </button>
     </div>
   </div>
   <mat-card class="order">
@@ -30,6 +32,9 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="showOrderDetails()">
+        <span>Show Details</span>
+      </button>
       <button mat-menu-item disabled>
         <span>Process</span>
       </button>

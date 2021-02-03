@@ -1,0 +1,16 @@
+.operations-form {
+  grid-template-columns: 1fr;
+  .mat-form-field {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .operations-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .mat-form-field {
+      width: 90%;
+    }
+  }
+}

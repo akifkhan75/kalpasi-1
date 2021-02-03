@@ -1,5 +1,7 @@
 .banner {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   img {
     width: 100%;
   }
@@ -12,4 +14,34 @@
 
 .button-group {
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .template-options {
+    display: flex;
+    .mat-form-field {
+      width: auto;
+      margin-right: 20px;
+    }
+  }
+  .image-fields {
+    display: flex;
+    .mat-form-field {
+      width: auto;
+    }
+  }
+  .messages-group {
+    display: flex;
+    .mat-form-field {
+      width: auto;
+      margin-right: 20px;
+    }
+  }
+  .button-group {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
